@@ -1,10 +1,19 @@
 import express from "express";
 import { transferFromTreasury, } from "./src/Token/tokenCredit.js";
 import morgan from "morgan";
-import dotenv from "dotenv";
-dotenv.config({ path: "/media/alastor/New Volume/EcoSwapChain/ESC-BlockChain/MiddleLayer/ .env" });
 import jwt from "jsonwebtoken";
+import path from 'path';
+import { fileURLToPath } from 'url';
+import dotenv from 'dotenv';
 
+// Convert ES module URL to file path
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Build path to .env file (assuming .env is in the same directory as this file)
+const envPath = path.join(__dirname, '.env');
+
+dotenv.config({ path: envPath });
 
 const app = express();
 const PORT = 3000;

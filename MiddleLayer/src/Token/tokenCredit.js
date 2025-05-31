@@ -11,7 +11,7 @@ import {
 } from "@solana/spl-token";
 import fs from "fs/promises"
 import dotenv from 'dotenv';
-dotenv.config({ path: "/media/alastor/New Volume/EcoSwapChain/ESC-BlockChain/MiddleLayer/ .env" });
+dotenv.config();
 
 export async function transferFromTreasury(recipientAddress, amount) {
     const connection = new Connection(process.env.devnet_url, "confirmed");

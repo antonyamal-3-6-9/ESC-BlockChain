@@ -10,7 +10,7 @@ import {
 import dotenv from "dotenv";
 import fs from "fs";
 
-dotenv.config({ path: "/media/alastor/New Volume/EcoSwapChain/ESC-BlockChain/MiddleLayer/.env" });
+dotenv.config();
 
 const RPC_URL = process.env.devnet_url;
 const treasuryWalletPath = process.env.treasury_wallet_path;
